@@ -1,0 +1,146 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(100px);
+  animation: moveBlob 30s infinite ease-in-out;
+  z-index: 1;
+}
+
+.blob:nth-child(1) {
+  background: #ff6ec4;
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.blob:nth-child(2) {
+  background: #7873f5;
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -120px;
+}
+
+@keyframes moveBlob {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -50px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.dashboard-container {
+  max-height: 90vh;
+  overflow-y: auto;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.table {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #e3f2fd;
+}
+
+.btn-primary {
+  background-color: #0077b6;
+  border-color: #0077b6;
+}
+
+.btn-primary:hover {
+  background-color: #023e8a;
+  border-color: #023e8a;
+}
+
+.btn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+.input-group-text {
+  background-color: #e9ecef;
+  border: none;
+  color: #495057;
+}
+
+.input-group-text i {
+  color: #495057;
+}
+
+.input-group .form-control {
+  border: none;
+  background-color: #f8f9fa;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: auto;
+}
+.chart-container {
+  width: 150%;
+  max-width: 250px;
+  margin: 30px auto;
+}
